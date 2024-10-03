@@ -1,0 +1,5 @@
+
+ctrl + shitf + I = open Inspect Mode
+ctrl + F = Find in Inspect mode
+//tag = search tags in HTML dom
+[class-name] = search class-name in HTML dom

@@ -1,0 +1,171 @@
+Assignment no 1 
+- Open teh websites
+
+3-sept
+- Register page Auto fill
+
+4-sept
+assign - 1
+write a script for demo workshop
+step 1 - open the browser,maximize
+step 2 - enter into url
+step 3 - enter in to dws
+step 4 - verify the url
+step 5 - enter into redbus web-page
+step 6 - to back to dws
+step 7 - verify the page using title
+step 8 - to back to redbus
+step 9 - refresh the page
+step 10 - close the driver
+
+assign 2
+step 1 - open the browser maximize
+step 2 - enter into url
+step 3 - enter in to dws 
+step 4 - verify the url
+step 5 - click tje login button
+step 6 - fill all the details a do Login
+step 7 - close the driver
+
+SEPT - 09
+01- Write a script for dws website using absolute xpath
+step 1 - open the browser,maximize
+step 2 - enter into url
+step 3 - enter in to dws
+step 4 - verify the using webElement
+step 5 - click register link and Fill register Form
+step 6 - close the driver
+
+SEPT - 09
+02- Write a script for dws website using absolute xpath
+step 1 - open the browser,maximize
+step 2 - enter into url
+step 3 - enter in to dws
+step 4 - verify the using Title
+step 5 - verify Login link isEnabled
+step 5 - click Login link and Fill details 
+step 6 - click login button
+step 7 - close the driver
+
+SEPT - 12
+02- Write a script for dws website using absolute xpath
+step 1 - open the browser,maximize
+step 2 - enter into url
+step 3 - enter in to dws
+step 4 - verify the using URL
+step 5 - at footer on follow us list using findelements 
+step 5 - verify Login link isEnabled
+step 5 - click Login link and Fill details 
+step 6 - click login button
+step 7 - close the driver
+
+
+SEPT - 13
+
+
+step 1 - open the browser,maximize
+step 2 - enter into url
+step 3 - enter in to dws
+step 4 - do login
+
+Assign - 01
+
+step 2 - click on Digitaldownload
+step 3 - add all the product by using findElements 
+step 4 - Remove the highest price of the product
+step 5 - logout 
+step 6 - close browser
+
+Assign - 02
+
+step 2 - click links like on all follow us using findElements
+step 5 - logout 
+step 6 - close browser
+
+
+Assign - 03
+
+step 2 - click on 25$ gift cart
+step 3 - fill all the details by using FindElements
+step 4 - Change the Qty to 3
+step 5 - Add the product
+step 6 - verify the product weather it is successfully added or not 
+		 in shopping cart
+step 7 - logout 
+step 8 - close browser
+
+
+SEPT - 25
+Assign - 01
+Write a script for FaceBook App
+step 1 - open the browser,maximize
+step 2 - enter into url
+step 3 - enter in to www.facebook.com
+step 4 - verify the url using title
+step 5 - click the create new Account button
+step 6 - Fill All details in Register including DOB [DropDown Menu]
+step 7 - close the driver
+
+
+
+SEPT - 26
+
+write a Script fro Dws
+step 1 - open the browser,maximize
+step 2 - enter into url
+step 3 - enter in to dws
+step 4 - verify the title
+step 5 - click on DigitalDownload
+step 7 - click all options present in sort by Dropdown menu
+step 8 - close the driver
+
+SEPT - 27
+
+write a Script for Dws 
+			9. getFirstSelectedOption()  
+			10. getAllSelectedOptions()  
+		~	11. getOptions()  
+		~	12. isMultiple()  
+			13. getWrappedElement()  
+			14. isSelected()
+			15. equals()
+			16. hasCode()
+			
+
+SEPT - 28
+
+write a Script fro Dws
+step 1 - open the browser,maximize
+step 2 - enter into url
+step 3 - enter in to myntra
+step 4 - verify the title
+step 5 - do mouse hovering for All Category present on Navbar using * findElements
+step 6 - close the driver
+
+
+
+1-OCT
+
+write a Script for Dws
+step 1 - open the browser,maximize
+step 2 - enter into dws site
+step 3 - verify the page using url
+step 4 - click the register link. fill all
+		 the details and click register button without Driver methods
+step 6 - close the driver
+
+
+
+1-OCT
+
+write a Script for Dws
+step 1 - open the browser,maximize
+step 2 - enter into dws site
+step 3 - verify the page using url
+step 4 - click the login link. fill all
+		 the details and click register button without Driver methods
+step 6 - close the driver
+
+
+
+

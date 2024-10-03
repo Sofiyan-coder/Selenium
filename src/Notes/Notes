@@ -1,0 +1,226 @@
+
+ driver.close() - used to close window
+ driver.quit() - used to close all windows i.e. browser
+ 
+ SEPT - 9
+xpath 2 types
+
+absolute xpath
+
+parent  to child 
+example,
+/html/body/div[4]/div[1]/div[1]/div[3]/form/input[2]
+
+child to parent
+
+sibling traversing
+down-ward - following-sibling::TagName
+
+Up-ward - preceding-sibling::TagName
+
+example,
+
+
+
+
+SEPT-10
+ 
+ driver.findElements()
+	 - it is WebElements Methods
+	 - it is an abstract method
+	 - it finds multiple elements
+	 - it will return the  matching elements
+	 - return type is List<WebElements>
+	 
+Keys to Find Multiple elements
+------------------------------
+	1) find the Common Attribute
+	
+	2) Traverse to the Common parent
+	
+	
+	
+	SEPT-13
+	
+	
+	Xpath Type
+	----------
+	
+	Contains Function = //TagName[contains(text(),'Value')];
+	
+SETP 24
+
+Cross Browser Testing:
+Opening Specific Browser by passing Browser name in preCondition()
+
+
+SETP 25
+
+Select Class
+	- It is Selenium class which is having some predefined methods
+	- it is used to handle the DropDown menu
+
+Note :  - DropDown menu are developed using Select Class
+	    - If  that DropDown mMenu is not developed under Select Class we Can't able to Select class Methods
+	    - All the Element which is present inside the DropDown Menu is Developed by using Option Tag
+	    
+	   
+
+	Types of dropdown menu
+	----------------------
+		- Single select DropDown menu [Single value]
+			- Only Action can be perform i.e Select
+		- Multiple select DropDown menu [Multiple values]
+			- 2 Action can be perform i.e Select & Deselect
+		
+	Methods of DropDownMenu
+	-----------------------
+		- All methods are non-static methods
+		- 14 methods
+	
+	Syntax
+	------
+		Select ref = new Select(Targeted dropDown menu WebElement);
+		
+		- 14 Methods
+		------------
+		~	1. Select(WebElement element)  
+		~	2. selectByIndex(int index)  
+		~	3. selectByValue(String value)  
+		~	4. selectByVisibleText(String text)  
+		~	5. deselectByIndex(int index)  
+		~	6. deselectByValue(String value)  
+		~	7. deselectByVisibleText(String text)  
+		~	8. deselectAll()  
+			9. getFirstSelectedOption()  
+			10. getAllSelectedOptions()  
+		~	11. getOptions()  
+		~	12. isMultiple()  
+			13. getWrappedElement()  
+			14. isSelected()
+			15. equals()
+			16. hasCode()
+			
+			
+			
+SEPT - 27
+Action Class
+------------
+	- It in a selenium Class which having some predefined method
+	- which is used to perform Mouse and keyword action
+	
+	Mouse Actions
+ 	-------------
+ 		-> Click
+ 		-> doubleClick
+ 		-> Mouse Hover
+ 		-> Right Click
+ 		-> Drag and Drop
+ 		-> Click and Hold
+ 		
+ 	Mouse Method
+ 	------------
+ 		- click()
+ 		- doubleClick()				Syntax
+ 		- contextClick()			------    
+ 		- dragAndDrop()					Actions ref = new Actions(driver);
+ 		- clickAndHold()				// Action to perform
+ 		- release()						perform()// call for Actions execution
+ 		- mouseToElement()
+ 		
+ Keyword Actions
+ ---------------
+  -> Press the Key
+  -> Release the Key
+  
+  				Key Methods
+  				------------
+  					- keyDown();
+  					- keyUp();
+  					- sendKeys();
+  				
+ 
+ SEPT-28
+ -------
+ Action Class
+ ------------
+		 Mouse Action on Myntra navbar
+		 		
+		 			//create Action object
+		 			Actions action = new Actions(driver);
+		 			
+		 			// find WebElement
+					WebElement kibs = driver.findElement(By.xpath("//a[text()='Kids']"));
+					
+					// perform action and execute by calling perform()
+					action.moveToElement(kibs).perform();
+					
+				* To freeze Web page
+					- Dev Tools -> Source -> click on Pause script exec Button
+					- Shortcut: Ctrl + /
+			
+  
+	SEPT 30
+	-------
+	dragAndDrop()	
+	
+	
+	1,2 OCT
+	-------
+	clickAndHold()
+	
+			KeyBoard Actions										Syntax
+			----------------										------
+																								
+				Methods
+				-------
+					-> keyDown() -> Press Key
+					-> keyUp() -> Release the Key
+					-> sendKeys() -> Sending some values
+					
+	3 OCT
+	-------
+
+			Pop-Up
+			------
+			- Tiny window which will be displayed in our Web-App 
+			  when we try to do some certain action at 
+			  
+			- Whenever we try to do some certain action it will displayed
+			  
+			- Gives notification , Information,   Warning Messages to the users
+			
+			- Pop-up's are classified into & types
+			
+			Types of Pop-Up 
+			---------------
+			-> Child browser pop-up
+			-> Alert pop-up by JavaScript pop-up
+			-> Notification pop-up
+			-> Authentication pop-up
+			-> File Upload pop-up
+			-> File Download pop-up
+			-> Calendar pop-up
+			  
+			
+				1. Child browser pop-up
+				------------------------
+				
+				Driver Methods
+				---------------
+						-> getWindowHandle() - returns handle in string
+						-> getWindowHandles() - returns All handle in Set with parent
+						-> switchTo().window( "Target Handle")
+				
+				Methods
+				-------
+					-> 
+					-> keyUp() -> Release the Key
+					-> sendKeys() -> Sending some values
+				
+	
+	
+
+
+	
+
