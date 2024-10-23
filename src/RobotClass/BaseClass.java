@@ -1,4 +1,4 @@
-package UtilityClass;
+package RobotClass;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class ShopperStackBaseClass {
+import graphql.org.antlr.v4.runtime.tree.xpath.XPath;
 
-	public static String url = "https://www.shoppersstack.com/";
+public class BaseClass {
+
+	public static String Title = "Demo Web Shop";
+	public static String url = "https://demoapps.qspiders.com/ui/fileUpload?sublist=0";
 
 	public static WebDriver driver;
 
@@ -23,9 +26,9 @@ public class ShopperStackBaseClass {
 		return false;
 	}
 
-	public static boolean verifyTitle(String title) {
-		
-		if (title.equals(driver.getTitle())) {
+	public static boolean verifyTitle() {
+
+		if (getTitle().equals(driver.getTitle())) {
 
 			return true;
 
@@ -33,42 +36,44 @@ public class ShopperStackBaseClass {
 		return false;
 	}
 
+	public static String getTitle() {
+		return Title;
+	}
+
+	public static void setTitle(String title) {
+		Title = title;
+	}
+
+	public static WebDriver getDriver() {
+		return driver;
+	}
+
+	public static void setDriver(WebDriver driver) {
+		BaseClass.driver = driver;
+	}
+
 	public static void closeBrowser() {
 		driver.quit();
 
 	}
 
-	public static void logIn() throws InterruptedException {
-		
-		
-		
-		waitFor(3);
-		driver.findElement(By.xpath("//*[@id=\"loginBtn\"]")).click();
-//
+	public static void logIn() {
 
-//
+		driver.findElement(By.partialLinkText("Log")).click();
+
 		driver.findElement(By.id("Email")).sendKeys("sofiyan@gmail.com");
 
-		driver.findElement(By.id("Password")).sendKeys("Abc@1234");
-//
-		driver.findElement(By.xpath("//*[@id=\"Login\"]/span[1]")).click();
-		
-		
-//		
+		driver.findElement(By.id("Password")).sendKeys("123456");
+
+		driver.findElement(By.cssSelector("input[value= \"Log in\"]")).click();
 
 		System.out.println("Login Successfull");
-		waitFor(2);
 
 	}
 
-	public static void logOut() throws InterruptedException {
-		waitFor(1);
-		driver.findElement(By.xpath("//*[@id=\"root\"]/section[1]/article/div[3]/div[1]/button")).click();
-		waitFor(2);
-		
-		driver.findElement(By.xpath("//*[@id=\"account-menu\"]/div[3]/ul/li[7]")).click();
-		System.out.println("Logout....");
-		
+	public static void logOut() {
+
+		driver.findElement(By.xpath("//a[@class ='ico-logout']")).click();
 
 	}
 
@@ -98,9 +103,8 @@ public class ShopperStackBaseClass {
 
 		}
 
-//		maxBrowser();
-//		browseTo(url);
-//		waitFor(30);
+		maxBrowser();
+		browseTo(getUrl());
 //		logIn();
 
 	}
@@ -155,7 +159,7 @@ public class ShopperStackBaseClass {
 
 	}
 
-	public static void postCondition() throws InterruptedException {
+	public static void postCondition() {
 
 		logOut();
 		closeBrowser();
@@ -168,9 +172,9 @@ public class ShopperStackBaseClass {
 
 	}
 
-	public static void browseTo(String  url) {
+	public static void browseTo(Object object) {
 
-		driver.navigate().to(url);
+		driver.navigate().to((String) object);
 
 	}
 
@@ -178,7 +182,7 @@ public class ShopperStackBaseClass {
 
 		maxBrowser();
 		waitFor(2);
-		browseTo(url);
+		browseTo(getUrl());
 
 		waitFor(2);
 
@@ -218,5 +222,12 @@ public class ShopperStackBaseClass {
 
 	}
 
-	
+	public static String getUrl() {
+		return url;
+	}
+
+	public static void setUrl(String url) {
+		BaseClass.url = url;
+	}
+
 }

@@ -71,6 +71,7 @@ public class MultiSelectDropDown extends BaseClass {
 			select.deselectByIndex(j--);
 
 		}
+		
 
 		// Close Browser
 //				driver.quit();

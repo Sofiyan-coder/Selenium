@@ -32,6 +32,7 @@ public class BothDropDownMenuActions extends BaseClass {
 			for (WebElement opt : options) {
 				waitFor(1);
 				select.selectByIndex(i++);
+				select.getWrappedElement();
 
 			}
 			

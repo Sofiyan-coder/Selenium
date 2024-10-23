@@ -168,4 +168,49 @@ step 6 - close the driver
 
 
 
+3-OCT
+
+write a Script for Dws
+step 1 - open the browser,maximize
+step 2 - enter into dws site
+step 3 - verify the page using url
+step 4 - click the All follow us links , facebook etc
+step 5 - click new account button in Facebook
+step 6 - click new account button in Twitterd
+step 7 - close all the browser
+
+
+09-OCT
+
+write a Script for easy my trip
+step 1 - open the browser,maximize
+step 2 - enter into easy my trip site
+step 3 - displays two pts , select departure date present date
+step 4 - Arrival select day after 160 days 
+step 7 - close all the browser
+
+
+10-OCT
+-----
+
+write a Script for easy my https://omayo.blogspot.com/
+step 1 - open the browser,maximize
+step 2 - enter into easy my trip site
+step 3 = dropDown click on flipKart [FlipKart should open in diff tab]
+step - send watch in Search field and press enter
+step  - after search refresh the https://omayo.blogspot.com/
+step 4 - click button 3 web element [timer enable button] it gives pop-up
+step - get the text of pop-up and handle the pop-up
+step 7 - close all the browser
+
+
+
+
+OCT-14
+write a script for iframe page
+step 1 - open the browser,maximize
+step 2 - enter into iframe page
+step 3 - click facebook link which is present at the bottom 
+step 4 - click new Account in facbook
+step 5 - After clickin the Create new Acc click on Google on homepages
 

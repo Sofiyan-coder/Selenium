@@ -23,7 +23,8 @@ public class DWSFacebookClick extends BaseClass{
 		act.keyDown(Keys.PAGE_DOWN).perform();
 		Thread.sleep(1000);
 		act.keyDown(Keys.PAGE_DOWN).perform();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
+		String  parent = driver.getWindowHandle();
 		driver.findElement(By.xpath("//a[text()='Facebook']")).click();
 		
 		Set<String> child_windows = driver.getWindowHandles();
@@ -37,6 +38,12 @@ public class DWSFacebookClick extends BaseClass{
 		Thread.sleep(2000);
 		WebElement email = driver.findElement(By.xpath("(//input[@name='email'])[2]"));
 		email.sendKeys("tony.stark@gmail.com");
+		
+		// switch back to parent
+		Thread.sleep(2000);
+		driver.switchTo().window(parent);
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Laptop");
+		
 		
 
 	}

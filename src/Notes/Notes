@@ -60,8 +60,8 @@ Select Class
 	- It is Selenium class which is having some predefined methods
 	- it is used to handle the DropDown menu
 
-Note :  - DropDown menu are developed using Select Class
-	    - If  that DropDown mMenu is not developed under Select Class we Can't able to Select class Methods
+Note :  - DropDown menu are developed using Select tag
+	    - If  that DropDown mMenu is not developed under Select tag we Can't able to use Select class Methods
 	    - All the Element which is present inside the DropDown Menu is Developed by using Option Tag
 	    
 	   
@@ -69,7 +69,7 @@ Note :  - DropDown menu are developed using Select Class
 	Types of dropdown menu
 	----------------------
 		- Single select DropDown menu [Single value]
-			- Only Action can be perform i.e Select
+			- Only one Action can be perform i.e Select
 		- Multiple select DropDown menu [Multiple values]
 			- 2 Action can be perform i.e Select & Deselect
 		
@@ -194,12 +194,35 @@ Action Class
 			
 			Types of Pop-Up 
 			---------------
-			-> Child browser pop-up
+			-> Child browser pop-up ✅
+			
 			-> Alert pop-up by JavaScript pop-up
+			
+				1) simple Alert - it contains only one option [OK]
+				2) Confirmation Alert - it contains two options [Ok] and [Cancel]
+				3) prompt Alert - it contains three options [text field] and [Ok] and [Cancel]
+				
+						Alert Class
+						-----------
+						
+							Syntax:
+							------			driver.switchTo().alert()
+							
+							Method Alert
+							---------------
+								-> accept() - press OK
+								-> didMiss() - press cancel
+								-> sendKeys() - Enter text in Textfield
+								-> getText() - 
+				
 			-> Notification pop-up
+			
 			-> Authentication pop-up
+			
 			-> File Upload pop-up
+			
 			-> File Download pop-up
+			
 			-> Calendar pop-up
 			  
 			
@@ -217,9 +240,142 @@ Action Class
 					-> 
 					-> keyUp() -> Release the Key
 					-> sendKeys() -> Sending some values
+					
+					
+7-OCT
+-----
+Robot Class
+
+What is the Robot Class?
+
+		The Robot class in Java is part of the java.awt package and is used for automating keyboard and 
+		mouse operations.It is particularly useful when you need to interact with OS-level popups or
+		windows that cannot be controlled through Selenium or other web-based automation tools.
+		The Robot class allows you to mimic user interactions such as pressing keys,
+		moving the mouse, clicking, and more.
+		
+		
+		
+10-OCT
+------
+
+WebDriver Waiting Commands
+---------------------------
+
+		Synchronization in Selenium
+		
+		-> Matching the Selenium Speed with browser Speed
+		
+		Types 
+		-----
+		
+		if action is found it will not wait for remaining time
+		
+			1) implicitWait ->  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+			
+								
+								Only applied if findElement() is used 
+			
+			2) ExplicitWait ->   i) Create an Object for WebDriverWait
+			
+									WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+									
+								ii) provide the condition
+								
+									// Condition
+									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginBtn")));
 				
-	
-	
+
+						
+12-OCT
+------
+
+		<iframe>
+		------
+		
+		Emebbeded page -> A Page which is present inside an another page 
+						  in could as Embbed page
+						  
+					   -> it will be developed under iframe tag
+					   
+		Syntax
+		------
+				driver.switchto.frame(agr);
+		
+		Types of arg's
+		
+		-------------
+				-> Int		  - index of the frame
+				-> String 	  - Value of the name or Id
+				-> WebElement -  WebElement of the frame
+		
+		iframe methods
+		-------------
+				* parentFrame(); -> driver.switchTo().parentFrame();
+				
+				* defaultContent();=
+			
+
+13-OCT
+------
+
+Take Screenshot 
+---------------
+
+		- it takes screenshot of web page were Controller is present
+		
+		- using getScreenShot(OutType.FILE)
+		
+		- Present in TakeScreenShot Interface
+		
+	Syntax
+	------
+			WebDriver driver = new ChromeDriver();
+			TakeScreenshot ts = (TakeScreenshot) driver // explicit Type casting
+			File from = ts.getScreenshotAs(OutputType.FILE)
+			File to = new File("location URL")
+			FileHandler.copy(form, to);
+
+
+18-OCT
+------
+
+		custom file name using :-> String data = LocalDateTime.now().toString();
+								   data = data.replace(":","-");
+		
+
+		use try-catch block for login +ve and -ve input's to take Screen Shot
+		
+19-OCT
+------
+
+JavaScriptExecutor
+-------------------
+					Syntax 
+					-------
+							JavaScriptExecutor js = (JavaScriptExecutor) driver;
+							js.executeScript( "String agrs ");
+		
+		
+		
+		-> It is interface
+		
+		-> executeScript(); --> Synchronized
+		
+		->executeScript();  --> non - Synchronized
+		
+		Actions;
+		-------
+			-> Scrolling
+					- scrollBy
+					- scrollTo
+					- scrollIntoView
+					
+			-> click the disable Element - > click()
+			
+			-> perform an action on Hidden Elements
+
+
 
 
 	

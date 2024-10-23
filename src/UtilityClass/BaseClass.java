@@ -10,10 +10,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import graphql.org.antlr.v4.runtime.tree.xpath.XPath;
 
 public class BaseClass {
-	
-	private  static String Title = "Demo Web Shop";
 
-	private static String url = "https://demowebshop.tricentis.com/";
+	public static String Title = "Demo Web Shop";
+	public static String url = "https://demowebshop.tricentis.com/";
 
 	public static WebDriver driver;
 
@@ -23,17 +22,17 @@ public class BaseClass {
 
 			return true;
 
-		} 
+		}
 		return false;
 	}
-	
+
 	public static boolean verifyTitle() {
 
 		if (getTitle().equals(driver.getTitle())) {
 
 			return true;
 
-		} 
+		}
 		return false;
 	}
 
@@ -71,6 +70,20 @@ public class BaseClass {
 		System.out.println("Login Successfull");
 
 	}
+	
+	public static void notLogIn() {
+
+		driver.findElement(By.partialLinkText("Log")).click();
+
+		driver.findElement(By.id("Email")).sendKeys("sofiyan@gmail.com");
+
+		driver.findElement(By.id("Password")).sendKeys("123");
+
+		driver.findElement(By.cssSelector("input[value= \"Log in\"]")).click();
+
+		System.out.println("Not Login Successfull");
+
+	}
 
 	public static void logOut() {
 
@@ -87,87 +100,81 @@ public class BaseClass {
 
 	public static void preCondition(String browser) {
 
-		 if (browser.equalsIgnoreCase("chrome")) {
-			
+		if (browser.equalsIgnoreCase("chrome")) {
+
 			driver = new ChromeDriver();
-			
-		}else if (browser.equalsIgnoreCase("firefox")) {
-			
+
+		} else if (browser.equalsIgnoreCase("firefox")) {
+
 			driver = new FirefoxDriver();
-			
-		}else if (browser.equalsIgnoreCase("edge")) {
-			
+
+		} else if (browser.equalsIgnoreCase("edge")) {
+
 			driver = new EdgeDriver();
-			
-		}else { 
+
+		} else {
 			driver = new ChromeDriver();
-			
+
 		}
 
 		maxBrowser();
-		browseTo(getUrl());
+//		browseTo(getUrl());
 //		logIn();
 
 	}
+
 	public static WebDriver preCondition02(String browser) {
 
-		 if (browser.equalsIgnoreCase("chrome")) {
-			
+		if (browser.equalsIgnoreCase("chrome")) {
+
 			return new ChromeDriver();
-			
-		}else if (browser.equalsIgnoreCase("firefox")) {
-			
+
+		} else if (browser.equalsIgnoreCase("firefox")) {
+
 			return new FirefoxDriver();
-			
-		}else if (browser.equalsIgnoreCase("edge")) {
-			
+
+		} else if (browser.equalsIgnoreCase("edge")) {
+
 			return new EdgeDriver();
-			
-		}else { 
+
+		} else {
 			return new ChromeDriver();
-			
+
 		}
 
-		
-		
-
 	}
-	
+
 	public static void preCondition03(String browser) {
 
-		 if (browser.equalsIgnoreCase("chrome")) {
-			
-			driver = new ChromeDriver();
-			
-		}else if (browser.equalsIgnoreCase("firefox")) {
-			
-			driver = new FirefoxDriver();
-			
-		}else if (browser.equalsIgnoreCase("edge")) {
-			
-			driver =  new EdgeDriver();
-		
-		}else { 
-			driver =  new ChromeDriver();
-			
-		}
-		 
-		 maxBrowser();
+		if (browser.equalsIgnoreCase("chrome")) {
 
-		
-		
+			driver = new ChromeDriver();
+
+		} else if (browser.equalsIgnoreCase("firefox")) {
+
+			driver = new FirefoxDriver();
+
+		} else if (browser.equalsIgnoreCase("edge")) {
+
+			driver = new EdgeDriver();
+
+		} else {
+			driver = new ChromeDriver();
+
+		}
+
+//		maxBrowser();
 
 	}
-	
+
 	public static void preCondition() {
 
 		driver = new ChromeDriver();
 
-
 	}
 
 	public static void postCondition() {
-		
+
 		logOut();
 		closeBrowser();
 
